@@ -1,18 +1,19 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Oswald } from 'next/font/google';
+import { Inter, Oswald } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
 });
 
 export const oswald = Oswald({
-  subsets: ['latin'],
-  variable: '--font-oswald',
-  display: 'swap',
+  subsets: ["latin"],
+  variable: "--font-oswald",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -27,10 +28,15 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${oswald.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className={`${inter.variable} bg-slate-700 text-white min-h-full flex flex-col`}>
+      <body
+        className={`${inter.variable} bg-[#000000] text-white min-h-full flex flex-col`}
+      >
         <Navbar></Navbar>
+
+        {children}
+
         
-        {children}</body>
+      </body>
     </html>
   );
 }

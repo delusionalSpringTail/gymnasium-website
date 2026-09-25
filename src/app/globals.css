@@ -4,3 +4,7 @@
   --font-sans: var(--font-inter);
   --font-oswald: var(--font-oswald);
 }
+
+html {
+  scroll-behavior: smooth;
+}
