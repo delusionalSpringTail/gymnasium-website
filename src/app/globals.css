@@ -1,3 +1,6 @@
 @import "tailwindcss";
 
-
+@theme {
+  --font-sans: var(--font-inter);
+  --font-oswald: var(--font-oswald);
+}

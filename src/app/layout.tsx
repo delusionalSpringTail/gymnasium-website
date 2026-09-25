@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Oswald } from 'next/font/google';
+import Navbar from "@/components/Navbar";
 
 export const inter = Inter({
   subsets: ['latin'],
@@ -26,7 +27,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${oswald.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className={`${inter.variable} bg-slate-700 text-white min-h-full flex flex-col`}>{children}</body>
+      <body className={`${inter.variable} bg-slate-700 text-white min-h-full flex flex-col`}>
+        <Navbar></Navbar>
+        
+        {children}</body>
     </html>
   );
 }
