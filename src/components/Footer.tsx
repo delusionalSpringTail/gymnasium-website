@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="w-full bg-[#0a0a0c] text-zinc-500 border-t border-zinc-800/60 px-4 sm:px-8 py-6">
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         
-        {/* Left Side: Brand Logo */}
+
         <Link href="/" className="flex items-center gap-2.5 group">
           <div className="relative w-6 h-6 flex items-center justify-center">
             <Image
@@ -16,7 +16,7 @@ export default function Footer() {
               alt="FITLOG Logo"
               width={24}
               height={24}
-              className="object-contain opacity-90 group-hover:opacity-100 transition-opacity"
+              className="object-contain"
             />
           </div>
           <span className="font-oswald font-bold text-lg tracking-wider text-white uppercase">
@@ -24,7 +24,6 @@ export default function Footer() {
           </span>
         </Link>
 
-        {/* Right Side: Copyright & Tagline */}
         <p className="text-xs sm:text-sm text-zinc-400 text-center sm:text-right">
           © 2026 FitLog — Workout Library. Train hard, log honest.
         </p>

@@ -68,7 +68,7 @@ export default function Navbar({ planCount = 10, savedCount = 0 }: NavbarProps) 
         <div className="hidden md:flex items-center gap-5 text-sm font-medium">
           {/* Plan Counter */}
           <Link
-            href="/my=plan"
+            href="/my-plan"
             className="flex items-center gap-2 text-zinc-300 hover:text-white transition-colors"
           >
             <span>Plan</span>
