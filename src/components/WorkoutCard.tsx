@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export interface Workout {
   id: number;
@@ -22,7 +23,8 @@ interface WorkoutCardProps {
 
 export default function WorkoutCard({ workout }: WorkoutCardProps) {
   return (
-    <div className="bg-[#12141a] border border-zinc-800/80 rounded-2xl overflow-hidden hover:border-zinc-700 transition-all duration-300 flex flex-col justify-between group">
+      <Link href={`/workouts/${workout.name.toLowerCase().split(" ").join("-")}`} className='cursor-pointer'>
+          <div className="bg-[#12141a] border border-zinc-800/80 rounded-2xl overflow-hidden hover:border-zinc-700 transition-all duration-300 flex flex-col justify-between group">
       
       <div>
         {/* Workout Image */}
@@ -90,5 +92,6 @@ export default function WorkoutCard({ workout }: WorkoutCardProps) {
       </div>
 
     </div>
+      </Link>
   );
 }
